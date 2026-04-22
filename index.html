@@ -201,7 +201,7 @@
 
     .crop-facts {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 1px;
       background: var(--green-rule);
       border: 1px solid var(--green-rule);
@@ -210,9 +210,14 @@
       margin-top: 3rem;
     }
 
+    @media (max-width: 600px) {
+      .crop-facts { grid-template-columns: repeat(2, 1fr); }
+    }
+
     .fact {
       background: var(--white);
       padding: 1.5rem;
+      text-align: center;
     }
 
     .fact-value {
