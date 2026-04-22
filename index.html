@@ -461,9 +461,39 @@
     }
 
     footer a:hover { color: rgba(247,245,240,0.75); }
+
+    /* ── Botanical illustrations ── */
+
+    .botanical {
+      position: fixed;
+      bottom: 0;
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+      opacity: 0.22;
+    }
+
+    .botanical-right {
+      right: calc(50% - 560px);
+      width: 300px;
+      transform: scaleX(-1);
+    }
+
+    .botanical-left {
+      left: calc(50% - 560px);
+      width: 265px;
+    }
+
+    @media (max-width: 1160px) {
+      .botanical { display: none; }
+    }
   </style>
 </head>
 <body>
+
+  <!-- Botanical illustrations — decorative, hidden on narrow screens -->
+  <img class="botanical botanical-right" src="cowpea6.png" alt="" aria-hidden="true">
+  <img class="botanical botanical-left"  src="cowpea5.png" alt="" aria-hidden="true">
 
   <nav>
     <a class="nav-brand" href="#hero">Cowpea</a>
